@@ -1,0 +1,476 @@
+@import reset
+
+/* Specification */
+body 
+ font-family: Circe, sans-serif
+ font-size: 18px
+ color: #fff
+ margin: 0
+ padding: 0
+ position: relative
+
+* 
+ box-sizing: border-box
+
+ul,li,p 
+ padding: 0
+ margin: 0
+
+.container
+ max-width: 1170px
+ padding: 0 15px
+ margin: 0 auto
+
+/* Header */
+
+.header
+ position: absolute
+ top: 0
+ right: 0
+ left: 0
+ z-index: 99999
+ padding-top: 27px
+ &__menu
+  +flex
+  align-items: center
+  .nav
+   +flex
+   list-style: none
+   li 
+    padding: 6px 15px 
+    border: 1px solid transparent
+    transition: all .2s ease
+    &:hover
+
+     border: 1px solid $blue
+     border-radius: 25px
+   &__item
+    color: $light
+    text-decoration: none
+    font-weight: bold
+  .nav-toggle
+   display: none
+   width: 30px
+   padding: 10px 0
+   font-size: 0
+   color: transparent
+   border: 0
+   background: none
+   cursor: pointer
+   position: absolute
+   top: 26px
+   right: 24px
+   z-index: 1
+   &__item
+    display: block
+    width: 100%
+    height: 3px
+    background-color: #fff
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+    transition: background .2s linear
+    &:before, &:after
+     content: ""
+     width: 100%
+     height: 3px
+     background-color: #fff
+     position: absolute
+     left: 0
+     z-index: 1
+     transition: transform .2s linear
+    &:before
+     top: -9px 
+    &:after
+     bottom: -9px
+
+
+.first
+ background: url(../img/bg-header.jpg) center no-repeat / cover
+ height: 100vh
+ display: flex
+ flex-direction: column
+ justify-content: center
+ text-align: center
+ position: relative
+ min-height: 600px
+ &__title
+  font-size: 90px
+  font-weight: 900
+  color: $blue
+  line-height: 1em
+  margin-bottom: 32px
+  span 
+   color: $light
+   font-weight: 400
+   font-size: 86px
+ &__text
+  font-size: 36px
+  color: $light
+  font-weight: 300
+  max-width: 840px
+  margin: 37px auto 0px
+  line-height: 1em
+ &__btn
+  position: absolute
+  bottom: 11%
+  left: 50%
+  transform: translateX(-50%)
+  color: $light
+  font-size: 25px
+  font-weight: bold
+  text-transform: uppercase
+  text-decoration: none
+  background: $blue
+  padding: 13px 53px
+  border-radius: 50px
+
+.second
+ background: $light
+ padding-top: 70px
+ padding-bottom: 95px
+ &__content
+  +flex
+  text-align: center
+ &__item
+  max-width: 332px
+ &__title
+  font-size: 20px
+  color: #010101
+  font-weight: bold
+  margin-top: 42px
+ &__text
+  color: #7b7b7b
+  margin-top: 16px
+
+.third
+ background: $blue
+ padding-top: 170px
+ padding-bottom: 146px
+ &__content
+  +flex
+  align-items: center
+ &__title 
+  font-size: 74px
+  line-height: 67px
+  position: relative
+  padding-right: 66px
+  height: 220px
+  &:after 
+   content: ''
+   background: url(../img/line2.png) right top no-repeat 
+   width: 100%
+   height: 100%
+   top: 0
+   right: 0
+   position: absolute
+  span 
+   display: block
+   font-weight: 900
+ &__text
+  padding-left: 47px
+  line-height: 22px 
+  p 
+   margin-bottom: 25px
+
+.fourth
+ color: #000000
+ font-size: 75px
+ text-align: center
+ padding-top: 44px
+ padding-bottom: 69px
+ span 
+  font-weight: 900
+ &__line
+  display: block
+  margin: 0 auto
+ &__group
+  +flex
+  flex-wrap: wrap
+  margin-top: 38px
+ &__photo
+  position: relative
+  cursor: pointer
+  margin-top: 24px
+  img
+   display: block
+   width: 100%
+   height: auto
+   flex: 1 1 0
+ &__offer
+  position: absolute
+  z-index: 2
+  bottom: 24px
+  left: 24px
+  color: $light
+  text-align: left
+  max-width: 317px
+  .offer__title
+   font-size: 30px
+   font-weight: bold
+   line-height: 28px
+   margin-left: 7px
+  .offer__text
+   font-size: 14px 
+   background: $blue
+   text-align: center
+   width: 158px
+   padding: 2px 0
+   margin-top: 7px
+  .offer__arrow
+   font-size: 0
+   position: absolute
+   bottom: 2px
+   right: 16px
+   width: 19px
+   height: 19px
+   border-right: 4px solid $light
+   border-bottom: 4px solid $light
+   transform: rotate(-45deg)
+
+   &:before
+    content: ''
+    display: block
+    width: 6px
+    height: 6px
+    border-right: 4px solid $blue
+    border-bottom: 4px solid $blue
+    margin: 2px
+
+.fifth
+ background: url(../img/bg-section.jpg) top no-repeat / cover
+ padding-top: 65px
+ padding-bottom: 70px
+ &__content
+  +flex
+  align-items: center
+ &__offer
+  width: 56%
+  padding-left: 85px
+ &__title
+  font-size: 82px
+  span 
+   font-weight: 900
+ &__text
+  line-height: 20px
+ &__btn
+  padding-right: 64px
+  a 
+   color: $light
+   font-weight: bold
+   text-decoration: none
+   background-color: $blue
+   border-radius: 35px
+   padding: 18px 33px
+
+.sixth
+ position: relative
+ padding-top: 30px
+ padding-bottom: 363px
+ &__title
+  color: #000
+  font-size: 75px
+  text-align: center
+  span 
+   font-weight: 900
+ &__line
+  display: block
+  margin: 0 auto
+ .slider__item
+  background-color: #f8f8f8
+  color: #000
+  padding: 29px 27px 36px 30px
+  margin: 0px 15px
+ &__slider
+  +flex
+  margin-top: 35px
+ .slider__user
+  padding-left: 65px
+  position: relative
+ .slider__text
+  line-height: 26px
+  padding-bottom: 36px
+ .user__name
+  font-size: 16px
+  font-weight: bold
+ .user__position
+  font-size: 14px 
+  color: #797979
+  margin-left: 6px
+ .user__photo 
+  position: absolute
+  top: 50%
+  left: 0
+  transform: translateY(-50%)
+ .facebook
+  position: relative
+  display: inline-block
+  margin-left: 23px
+  height: 30px 
+  width: 30px
+  border: 1px solid #efefef
+  border-radius: 50%
+  transform: translateY(40%)
+  img
+   position: absolute
+   left: 50%
+   top: 50%
+   transform: translate(-50%, -50%)
+
+  
+.slick-arrow
+  border: none
+  font-size: 0px
+  background-color: transparent
+  border-left: 2px solid $arrow-color
+  border-bottom: 2px solid $arrow-color
+  width: 17px 
+  height: 17px
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  outline: none
+  cursor: pointer
+.slick-prev
+  left: -27px
+  transform: rotate(45deg)
+.slick-next
+  right: -23px
+  transform: rotate(-135deg)
+.slick-dots
+  position: absolute
+  bottom: -50px
+  left: 50%
+  transform: translateX(-50%)
+  +flex
+  button
+   border: none 
+   background: #ebecf0
+   font-size: 0
+   display: block
+   margin: 0px 10px
+   border-radius: 50%
+   padding: 4px 0
+   width: 8px
+   outline: none
+   cursor: pointer
+  .slick-active
+   button
+    background: $blue
+
+.section-blue
+ position: absolute
+ background: url(../img/bg-blue.jpg) top no-repeat / cover
+ bottom: 75px
+ width: 100%
+ padding: 53px 0
+ .blue-content
+  +flex 
+  justify-content: flex-end 
+  align-items: center
+ .blue-title
+  font-size: 40px
+  font-weight: bold
+  margin-right: 117px
+ .blue__btn-blue
+  color: #000
+  font-weight: bold
+  text-decoration: none
+  background-color: #fff
+  padding: 18.5px 47px
+  border-radius: 50px
+
+.footer
+ background-color: #2c2c2c
+ padding-top: 85px
+ &__content
+  +flex
+  padding-bottom: 27px
+  border-bottom: 1px solid #31353a
+ &__inner
+  max-width: 550px
+ &__copy
+  +flex
+  padding-top: 27px
+  padding-bottom: 36px
+  .copy__title
+   font-size: 14px
+   font-weight: 400
+   color: $light
+   span 
+    color: $grey__fot
+  .copy__suptitle
+   font-size: 14px
+   color: $grey__fot
+ h4
+  font-size: 18px 
+  font-weight: 400
+  color: $light
+  padding: 0
+  margin: 0
+ p 
+  color: $grey__fot
+  font-size: 16px
+  line-height: 25px
+  margin-top: 30px
+ h5 
+  font-size: 16px 
+  color: #f3f3f3
+  font-weight: 400
+  padding: 0 
+  margin-top: 20px
+  margin-bottom: 0
+ small 
+  display: block
+  font-size: 16px 
+  color: $grey__fot
+  padding: 0 
+  margin-top: 5px
+ form
+  position: relative
+  margin-top: 14px
+ .form__email
+  font-family: Circe, sans-serif
+  background: #34393e
+  border: none
+  outline: none
+  font-size: 16px
+  color: #5e666e
+  width: 390px
+  padding: 13px 60px 19px 30px
+  border-radius: 50px
+ .form__submit
+  position: absolute
+  top: 50%
+  right: 30px
+  transform: translateY(-50%)
+  border: none
+  background: url(../img/arrow-right.png) 
+  height: 13px
+  width: 17px
+  font-size: 0px
+  cursor: pointer   
+.footer__social
+  display: flex
+  justify-content: flex-end
+  margin-top: 173px
+  .social__item
+   margin-left: 13px
+  i 
+   color: #969ea6
+   background: #34393e
+   border-radius: 50%
+   width: 45px
+   height: 45px
+   text-align: center
+   line-height: 45px
+   transition: all .2s ease
+   &:hover
+    color: #34393e
+    background: #969ea6
+
+
+@import media
